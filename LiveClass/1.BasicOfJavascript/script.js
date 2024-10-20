@@ -214,6 +214,306 @@ console.log(Number("12a")); // NaN -> not a numebr
 
 // -------- RULE 3 : String with (* , / , -) : + means concatination (IMPLICIT)
 
+/*
+
 console.log("3" * 3, "mult")  // 9
 console.log("3" - 3, "sub")  // 0
 console.log("3" / 3, "division")  // 1
+*/
+
+// TODO: // give article for coersion.
+
+
+// ---------------------- Objects ------------------------------
+
+// Key - Value Pair
+// key - name, age
+// values - akash , 27
+/*
+const person = {
+    name: "akash",
+    age: 27,
+    currentlyStudying: 12,
+    "current salary": 1000
+}
+
+
+// CRUD -> Create, Read, Update, Delete
+
+// ------- READ/get ----------
+
+console.log(person.name, 'name') // akash
+console.log(person.currentlyStudying) // 12
+console.log(person["current salary"]) // 1000
+console.log(person["name"]) // akash
+
+
+
+// ---------- Update//Edit -----------
+person.name = "utkarsh";
+person["current salary"] = 90;
+
+console.log(person);
+
+
+// ------------- DELETE ------------------
+
+delete person["current salary"];
+
+
+console.log(person)
+
+*/
+
+// ---------------------- Arrays ------------------
+
+/*
+const arr = [15, 30, 45, 60, 75];
+
+console.log(arr); // [1,2,3,4,5]
+console.log(arr.length) // 5
+
+// Note: Weird Part  (NEVER DO THIS)
+// arr.length = 0;
+
+// console.log(arr); // []
+
+
+
+// ------------ READ/ get ------------
+
+console.log(arr[0]); // 15
+console.log(arr[1]); // 30
+
+console.log(arr[arr.length - 1]); // 75
+
+console.log(arr[90]) // undefined
+
+
+// -------------- EDIT/ 
+/*
+arr[0] = 20
+
+console.log(arr);
+
+
+
+// ----------- Array Properties ------------
+
+// 1. Push -> add new element in the last of the array 
+
+// arr.push(100);
+// console.log(arr);
+
+
+// 2. POP -> remove an element from the last.
+
+// arr.pop();
+// console.log(arr);
+
+
+// 3. SHIFT -> removes the value from the start of the array
+
+// arr.shift();
+// console.log(arr);
+
+
+// 4. Unshift -> add the value in the start of the array
+
+// arr.unshift(20);
+// console.log(arr);
+
+*/
+
+
+// ---------------------- PARSING IN JAVASCRIPT --------------------
+
+
+// Tavelling in Js file in 2 parts 
+/*  
+    1. PARSING PAHSE -> we care about variable and function Delcaration 
+    2. EXECUTION PHASE -> in this we actually implement the lines/code.
+
+*/
+
+
+// var a = 12;
+
+/*
+var a; // (declaration)
+a = 12; // (assignment)
+
+*/
+
+
+// -------------- HOISTING ----------------
+
+
+/*
+**** NON HOISTED VIEW ****
+    console.log(x, 'x')
+    var x = 99;
+*/
+
+
+/*
+ ***HOISTING VIEW****
+It seems that var x is declared on top 
+
+
+    var x;
+
+    console.log(x, 'x')
+    x = 99;
+
+
+*/
+
+
+
+// ------------------- BAsic Operations (Assignment, Operator) --------------
+
+/*
+console.log(1 +2); // 3
+console.log(Math.pow(2,3)) // 8
+
+// Modulo ----- % gives me remainder
+
+console.log(101 % 3) // 2
+
+console.log(10 % 2) // 0
+
+*/
+
+
+// --------- COmparisions -----------
+/*
+console.log(1> 2); // false
+
+console.log(1 <=2) // true
+
+
+console.log(1 == 2)// false
+console.log(1 != 2) // true
+
+// == vs ===
+//  == -> we do not check the type, ONLY VALUE WE CHECK (DO NOT USE THIS MOST OF THE TIMES)
+// === -> BOTH TYPE AND VALUE are checked (USE THIS ONLY)
+
+console.log(1 == "1") // true
+
+console.log(1 === "1") // false
+
+console.log(1 !== "1") // true
+*/
+
+
+// ------------------ BASIC PROGRAMMING ---------------
+
+// --------- CONDITIONS: 
+
+// 1. IF-ELSE
+
+/*
+if(money > 100000) {
+    // then purchase I phone 
+} else {
+    // go with 10k phone chinese
+}
+    */
+
+// if you want to find out if a number is even or not
+/*
+let  n = 100;
+
+if(n % 2 === 0 ) {
+    console.log("even")
+} else {
+    console.log("odd")
+}
+
+// NOTE: this is not the fastest way to check for the even and odd 
+// BITWISE is the fastest way
+
+
+if((n&1) === 0) {
+    console.log("even")
+} else {
+    console.log("odd")
+}
+
+*/
+
+// 2. Switch 
+/*
+switch(condition) {
+    case 1: 
+    console.log(1)
+        break;
+    case 2: 
+        break;
+    default: 
+        break;
+}
+*/
+
+
+// ----------------- Loops ----------------
+
+let arr  = [12,17,15,14,90,13]
+
+// 1. for loop 
+/*
+for(let i =0; i< arr.length ;i++) {
+    console.log(arr[i]);
+}
+*/
+
+// 2. while loop 
+
+/*
+let i =0;
+while(i < arr.length) {
+    console.log(arr[i]);
+
+    i++;
+} 
+*/
+
+// 3. for - of  (VALUES)
+// ITERABLE OBJECT -> Array Like object (Array, List)
+// if your OBJECT has Symbol(Symbol.iterator) -> then it means we can use for - of. 
+/*
+
+for(const item of arr) {
+    console.log(item, "for of loop")
+}
+
+// THIS WILL NOT WORK
+const obj = {
+    name: "utkarsh",
+    age: 27
+}
+
+for(const item of obj) {
+    console.log(item, "for of loop")
+}
+*/
+
+// 4. For - in loop (KEYS)
+// they print keys on object ({} , [])
+
+/*
+const obj = {
+    name: "utkarsh",
+    age: 27
+}
+
+for(const key in obj) {
+    console.log(key, obj[key], obj.key); // name utkarsh undefined
+}
+
+for(const key in arr) {
+    console.log(key, arr[key]);
+}
+*/
