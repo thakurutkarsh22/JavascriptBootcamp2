@@ -517,3 +517,5 @@ for(const key in arr) {
     console.log(key, arr[key]);
 }
 */
+
+// TODO: why String(person) will not work 

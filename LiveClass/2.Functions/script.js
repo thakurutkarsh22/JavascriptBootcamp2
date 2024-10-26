@@ -157,3 +157,32 @@ console.log(math.marks, 'Original math marks') // 100
 console.log(science.marks, 'Original science marks') // 93
 
 */
+
+
+// -------------- PURE va IMPURE Functions ---------------
+
+
+// PURE function : Takes input and gives output 
+// when I give the same input infinite amount of times the output is always same
+// pure function is not influencing outside variables or its not reaching outside.
+
+function sum(a,b) {
+    return a + b;
+}
+
+
+
+// IMPURE Funciton 
+
+function sum2(a,b) {
+    console.log("hello this is a sum.")
+    return a + b;
+}
+
+
+let j = 10;
+
+function sum3(a,b) {
+    j+=1;
+    return a + b;
+}
