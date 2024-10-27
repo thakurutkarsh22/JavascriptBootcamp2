@@ -84,6 +84,125 @@ console.log(a, 'after function call')
 */
 
 
+/*
+    EXAMPLE 5:
+    var obj = {
+        name: "akash"
+    }
+
+    console.log(obj)
+
+
+    function user() {
+        var obj = {
+            name: "utkarsh"
+        }
+
+        obj.name = "amit";
+
+        console.log(obj);
+    }
+
+    console.log(user());
+
+    console.log(obj);
+
+
+
+    // akash amit undef akash 
+*/
+
+
+
+
+/*
+    EXAMPLE 6:
+*/
+
+/*
+    var obj = {
+        name: "akash"
+    }
+
+    console.log(obj)
+
+
+    function user() {
+        obj = {
+            name: "utkarsh"
+        }
+
+        obj.name = "amit";
+
+        console.log(obj);
+    }
+
+    console.log(user());
+
+    console.log(obj);
+
+    // akash amit undef amit
+*/
+
+/*
+    EXAMPLE 7:
+    
+    var a = 12;
+    var a = 99;
+
+    console.log(a);
+
+    // 99
+*/
+
+
+// ----------- LET and CONST SCOPING --------------
+
+// we cannot re-declare let and cost in the same scope/{}/block like we use to do with var.
+// let a = 99;
+// let a = 10;
+
+/*
+    EXAMPLE 1: 
+    let a = 99;
+    console.log(a);
+
+    if(true) {
+        let a = 12;
+        console.log(a)
+    }
+
+    console.log(a);
+
+    // 99 12 99
+*/
+
+
+/*
+    EXAMPLE2: 
+
+    function greet(name = 'kk'){
+        console.log('hello ' + name);
+    }
+    greet("akash");
+
+    function greet(name = "alexa") {
+        console.log('hello2 greet2' + name )
+    }
+
+    greet();
+    greet("utkarsh");
+    greet(undefined);
+    greet(null);
+
+
+    // akash alexa utkarsh alexa null
+
+*/
+
+
+
+
 
 
 
