@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!--   -->
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--  -->
+        <meta name="viewport" content="width=device-width, initial-scale=2.0">
         <title>Document</title>
         <link href="./style.css" rel="stylesheet" /> 
+
+        <!-- <script defer ></script> -->
+
+        <!-- document.getELement. -->
+        <script defer src="./script.js"></script>
+
+        <!-- google analytics -->
+        <script async src="analyticScript"></script>
     </head>
     <body>
        <!-- Heading  -->
@@ -17,11 +27,12 @@
 
 
         <!-- paragraphs -->
+         <!-- SPAN -->
 
         <!-- id and class and others are nothing but ATTRIBUTES -->
         <p id="para1" class="adasd">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Soluta, a accusamus. Voluptate iste odit, vel magnam 
+            <i><u><b>hello </b></u></i>Soluta, a <span style="color: red;">accusamus.</span> Voluptate iste odit, vel magnam 
             aspernatur officiis? Minima, excepturi, voluptatum eveniet id officiis, 
             nemo veniam accusamus vero impedit commodi voluptatibus architecto quia. 
             Deserunt optio quidem, nulla totam, soluta ipsum ab quaerat praesentium voluptates illum 
@@ -71,12 +82,84 @@
 
         <br />
 
-        <img src="https://via.placeholder.com/150/92c952" alt="picture" width="100px" height="100px" srcset="" />
+        <img src="https://via.placeholder.com/150/92c952" alt="picture" width="100px" height="100px" />
+
+        <!-- image with Src Set -->
+        <picture>
+            <source media="(min-width:650px)" srcset="img_pink_flowers.jpg">
+            <source media="(min-width:465px)" srcset="img_white_flower.jpg">
+            <img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+        </picture>
+
+        <!-- Tables -->
+         <!-- Table use is limited as it is nonResponsive (Make the screen size small) -->
+        
+        <table id="table" style="border: 1px solid black;">
+            <thead>
+                <th>
+                    FirstName
+                </th>
+                <th>
+                    LastName
+                </th>
+                <th>
+                    Age
+                </th>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Priya</td>
+                    <td>Sharma</td>
+                    <td>24</td>
+                </tr>
+
+                <tr>
+                    <td>Arun</td>
+                    <td>Singh</td>
+                    <td>32</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!-- SCRIPT: we can add script tag on HEAD and Last of BODY  -->
+
+
+        <!-- COntainer (DUMB) -->
+
+        <div id="container">
+
+        </div>
+
+
+        <!-- -------- - - - - - - - -- SEMANTIC HTML (INTELLIGENT CONTAINER) ----- - - - - - - - -- - -  -->
+         <!-- LINK:  https://www.w3schools.com/html/html5_semantic_elements.asp -->
+         <!-- fi you want to create a accessible website then we HAVE to USE SEMANTIC HTML  (aria) -->
+        
+        <!-- See SemanticVs NonSemantic Folder -->
+
+        <!-- bold <b>, <strong> -->
+        <!-- italics <i>, <em> -->
+
+
+        <p>Lorem ipsum dolor sit amet, <strong><em>consectetur</em></strong> adipisicing elit. Voluptatem sed atque asperiores aperiam dicta vitae voluptatibus consequatur 
+            quas tenetur tempore commodi deserunt quam laboriosam itaque porro hic necessitatibus, voluptatum, pariatur et natus tempora molestias 
+            sapiente quae dolorem. Alias rerum quia natus consectetur voluptate doloremque, cupiditate provident. Blanditiis in 
+            laborum adipisci!
+        </p>
+
+
+        <!-- header () -->
 
 
 
 
 
-        <script src="./script.js"></script>
+
+
+        <!-- Disadvantage here to use script is that is first download and then execute (waste of time) instead use defer -->
+        <!-- <script src="./script.js"></script> -->
+       
     </body>
 </html>

@@ -1,0 +1,55 @@
+
+/* 1. BASIC SELECTOR  */
+
+/*
+p {
+    color: green;
+}
+
+h1 {
+    color: aquamarine;
+}
+
+#heading {
+    color: aquamarine;
+}
+
+.headingClass {
+    color: red; 
+}
+
+.paragraph {
+   color: red; 
+}
+
+
+.sports {
+    color: yellowgreen;
+}
+
+*/
+
+
+/* 2. COMBINATOR SELECOTR */
+
+/* 2.1  DECENDANT  */
+div p {
+    color: red;
+}
+
+/* 2.2 CHILD  */
+
+.nearPara > p {
+    color: green;
+}
+
+/* 3. Ajecent Sibling */
+
+div + p {
+    color: yellow;
+}
+
+/* 4. all sibling (~) */
+div ~ p {
+    color: yellow;
+}
