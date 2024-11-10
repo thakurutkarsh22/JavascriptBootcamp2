@@ -1,0 +1,164 @@
+
+
+/*
+    A box contains few things 
+    1. CONTENT. (Right in the middle)
+    2. PAdding (Outside content)
+    3. Border (Outside padding)
+    
+    4. Margin (Outside the border) 
+
+    Margin in NEVER THE PART OF ACTUAL VISIBLE CONTAINER, it only changes position not the size of box
+
+
+    2 TYPES (NATURE) of box
+
+    by default BOX-sizing is CONTENT BOX
+
+    1. CONTENT BOX (DEFAULT)
+    2. BORDER BOX (FORCE)
+
+*/
+
+
+/*
+    ---- CONTENT BOX -----
+
+    1. the main properties (width and height) are given to CONTENT ONLY.
+
+    (
+         width: 100px;
+        height: 100px;
+    )
+
+    2. the padding and border adds up in the element/box
+
+*/
+
+/*
+.container {
+    width: 100px;
+    height: 100px;
+    
+    background-color: red;
+
+    padding: 10px;
+    border: 3px solid black;
+    
+}
+    */
+
+
+
+/* TOTOAL WIDTH: 126 = (100 + 2*10 + 2*3) */
+/* TOTOAL HEIGHT: 126 = (100 + 2*10 + 2*3) */
+
+
+/*  
+    ------------- BORDER BOX ---------------
+
+    1. when I give with and height property = CONTENT + padding + BOrder
+
+    IN REAL WORLD PROJECT we do not need unclarity on the box size, we want uniformity.
+    so hence we use BORDER BOX.
+
+
+
+*/
+/* 
+.borderContainer {
+    box-sizing: border-box;
+
+    width: 100px;
+    height: 100px;
+
+    background-color: red;
+
+    padding: 20px;
+    border: 10px solid black;
+} */
+
+
+
+
+/* QUESTIONS  */
+
+/* Question 1  
+
+    .borderContainer {
+        box-sizing: border-box;
+
+        width: 50px;
+        height: 60px;
+
+        background-color: red;
+
+        padding: 10px;
+        border: 10px solid black;
+
+        margin: 10px;
+    }
+
+
+    total width of COntent ? 10 
+    total height of COntent ? 20
+
+    total height of BOX ? 50 
+    total width of box ? 60
+
+*/
+
+
+
+/*
+    Question 2
+
+    total width of COntent ? 60
+    total height of COntent ? 50
+
+    total width of box ? 75
+    total height of BOX ?  58
+
+    .container {
+        height: 50px;
+        width: 60px;
+
+        background-color: red;
+    
+        border-left: 5px solid black;
+        border-bottom: 5px solid black;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-right: 10px;
+        padding-top: 3px;
+    }
+*/
+
+
+/*
+    Question 3
+
+
+    .container {
+        box-sizing: content-box;
+
+        height: 50px;
+        width: 60px;
+    
+        border: 5px solid black;
+        margin: 200px;
+        padding: 10px;
+    } 
+
+
+    total width of COntent ? 60
+    total height of COntent ? 50
+
+    total width of box ? 90
+    total height of BOX ?  80
+
+
+*/
+
+
+  

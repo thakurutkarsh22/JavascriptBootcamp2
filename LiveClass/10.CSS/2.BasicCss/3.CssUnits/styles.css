@@ -1,0 +1,20 @@
+.fifty_vw {
+    width: 50vw;
+    background-color: aqua;
+}
+
+.twentyFive_vh {
+    height: 25vh;
+    background-color: red;
+}
+
+.parent_50 {
+    width: 50%;
+    background-color: pink;
+}
+
+.parent {
+    width: 50%;
+
+    border: 2px solid black;
+}

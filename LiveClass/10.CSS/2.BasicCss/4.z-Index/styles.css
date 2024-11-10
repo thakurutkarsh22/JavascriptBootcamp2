@@ -1,0 +1,104 @@
+
+/* ------  EXAMPLE 1: -------  */
+
+body {
+    position: absolute;
+    width: 100%;
+}
+
+.container {
+    width: 100px;
+    height: 100px;
+    color: white;
+    border: 1px solid black;
+
+}
+
+
+.container1 {
+    position: relative;
+    top: 150px;
+
+    background-color: red;
+    z-index: 20;
+
+}
+
+.container2 {
+    position: relative;
+
+    background-color: green;
+    /* top: 20px; */
+
+    z-index: 2;
+
+}
+
+.container3 {
+    position: relative;
+
+    background-color: blue;
+    /* top: 20px; */
+
+    z-index: 0;
+
+}
+
+
+
+/* EXAMPLE 2:  */
+
+.grandparent {
+    width: 100%;
+    height: 250px;
+    background-color: aqua;
+
+    position: absolute;
+}
+
+.parent {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    border: 1px solid black;
+}
+
+.parent1 {
+    background-color: red;
+
+    z-index: 1;
+
+    /* top: 200px */
+}
+
+
+.parent2 {
+    background-color: green;
+    z-index: 0;
+
+    top: 0px;
+}
+
+
+.child {
+    width: 50px;
+    height: 50px;
+
+    position: relative;
+
+    border: 1px solid black;
+}
+
+.child1 {
+    background-color: yellow;
+    z-index: -1000;
+
+    top: 240px;
+}
+
+.child2 {
+    background-color: orange;
+    z-index: 10000000000;
+    
+}
+
