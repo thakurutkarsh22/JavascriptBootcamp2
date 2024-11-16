@@ -1,0 +1,46 @@
+.navigation {
+    display: flex;
+    background-color: gray;
+
+    /* justify-content: space-between; */
+}
+
+
+nav ul li {
+    list-style: none;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.navItems {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* @media (min-width: 640px) and (max-width: 800px)  {
+    .navigation {
+        display: flex;
+        background-color: orange;
+        flex-direction: column;
+    
+        
+    }
+    
+} */
+
+/* 0px to 640 */
+@media (max-width: 640px) {
+    .navigation {
+        display: flex;
+        background-color: red;
+        flex-direction: column;
+    
+        /* justify-content: space-between; */
+    }
+
+    .navItems {
+        display: flex;
+        flex-direction: column;
+    }
+}
