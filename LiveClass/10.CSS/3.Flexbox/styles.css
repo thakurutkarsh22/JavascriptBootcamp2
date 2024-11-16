@@ -1,0 +1,67 @@
+.container {
+    height: 300px;
+    width: 50%;
+    background-color: red;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-direction changes the direction of the main axis */
+
+    /* justify-content: space-between; */
+    /* along main axis */
+
+    /* align-items: center;  */
+    /* along cross axis */
+
+    gap: 8px;
+    /* give manual space between 2 items  */
+}
+
+.child {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+.child1 {
+    order: 2;
+    /* DO NOT USE IT */
+    
+    flex-grow: 2;
+    /* Rerely use it (DO NOT) as the spacing usage is dependent on other chidren. READ FROM CSS TRICKS   */
+
+    align-self: flex-end
+    /* we can use this  */
+}
+
+.child2 {
+    order: 1;
+}
+
+.child3 {
+    order: 3;
+}
+
+
+.navigation {
+    display: flex;
+    background-color: gray;
+
+    justify-content: space-between;
+}
+
+
+nav ul li {
+    list-style: none;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.navItems {
+    display: flex;
+    gap: 10px;
+}

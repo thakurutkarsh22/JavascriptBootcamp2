@@ -16,6 +16,10 @@
     1. FONTS: em: Relative to the font-size of the element (2em means 2 times the size of the current font)
              rem: Relative to font-size of the root element 
 
+             em : scale relative to Parent (parent can be any box)
+             rem: is used for consistent sizing throughout the application 
+                scale relative to body tag. 
+
     2. View Ports: (VISIBLE screen ONLYZ)
         vh -> view height 
         vw -> view width
