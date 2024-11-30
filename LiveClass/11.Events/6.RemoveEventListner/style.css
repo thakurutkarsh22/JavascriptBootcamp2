@@ -1,0 +1,27 @@
+#targetContainer {
+    width: 500px;
+    height: 100px;
+    border: 1px solid black;
+
+
+}
+
+.pallet {
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid black;
+
+    margin: 10px;
+    padding: 10px;
+}
+
+#colorContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#targetContainer:hover {
+    background-color: black;
+}
