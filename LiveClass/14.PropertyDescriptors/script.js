@@ -4,6 +4,7 @@
 
 /*
     DISCRIPTOR PROPERTIES
+    //  NOTE ::: Property descriptors work at the level of individual properties.
 
     value: "utkarsh",
     writable: true,
@@ -46,7 +47,7 @@ obj.name = "aeroplane"
 console.log(obj)
 
 
-
+// this will make name PROPERTY as non changable and non deletable and it will not appear in for-in loop
 Object.defineProperty(obj, 'name', {
     writable: false,
     enumerable: false,
@@ -62,3 +63,29 @@ console.log(nameDescriptorAfterWrtableFalse, 'nameDescriptorAfterWrtableFalse')
 // THIS OPerATION will not work
 obj.name = "priyanka"
 console.log(obj);
+
+
+// -------------------- Sealing an object globally ---------------------
+
+// There are also methods that limit access to the whole object: 
+
+/*
+    1. Object.preventExtensions(obj):  Forbids the addition of new properties to the object.
+
+*/
+
+// Object.preventExtensions(obj);
+
+
+/*
+    2. Object.seal(obj) 
+    Forbids adding/removing of properties. Sets configurable: false for all existing properties
+*/
+
+// Object.seal(obj);
+
+/*
+    3. Object.freeze(obj) 
+    Forbids adding/removing/changing of properties. Sets configurable: false, writable: false for all existing properties.
+*/
+Object.freeze(obj);
