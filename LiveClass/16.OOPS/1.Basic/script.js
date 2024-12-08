@@ -247,10 +247,12 @@ class Star {
         this.years = year;
     }
 
+    // GETTER 
     get getWeight() {
         return this.#weight;
     }
 
+    // SETTER
     set setWeight(newWeight) {
         // PROPER ACCESS OF check then only we can update 
         this.#weight = newWeight;
@@ -279,13 +281,13 @@ class Circle {
         this.radius = r;
     }
 
-    // NORMAL METHODS
+    // NORMAL METHODS (INSTANCE METHOD)
 
     draw() {
         console.log("DRAW THE CIRCLE FOR RADIUS " , this.radius);
     }
 
-    // STATIC METHOD 
+    // STATIC METHOD  (CLASS METHOD)
     static hellowWOrld() {
         console.log("I am howlloe world the cricle")
     }
@@ -299,9 +301,14 @@ const c1 = new Circle(12);
 // there are Methods which are part of INSTANCE and there are methods which are part of CLASS.
 // static METHODS are part of CLASS 
 // NON STATIC Methods are part of INSTANCE
+// MATH.max() etc use the same principle
 
 c1.draw();
 Circle.hellowWOrld();
 
-Circle.draw(); // this will not work
+// Circle.draw(); // this will not work
 
+
+// ---------------------- Check instance ------------------
+
+console.log(c1 instanceof Circle); // true
