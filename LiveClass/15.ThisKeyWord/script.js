@@ -286,6 +286,10 @@ function abc() {
     console.log(this)
 }
 
+// by default context fro this line would be WINDOW
+setTimeout(abc, 5000)
+
+
 // abcWithCOntextAttached is abc only with CONTEXT already set to Obj1
 const abcWithCOntextAttached = abc.bind(obj1)
 
@@ -399,3 +403,37 @@ console.log(ankushPerson)
 
 
 utkarhPerson.canTalk.call(akashperson)
+
+
+
+// EXAMPLE 
+function printThis(params) {
+    console.log(this);
+}
+let obj = {
+    a: 10,
+    b: 20,
+    c: printThis,
+    d: function (params) {
+        // context -> this -> obj
+        console.log(this) // obj 
+        printThis(); // is this a call site? YES, have you given any extra INFO here? NO // WINDOW 
+        let x = this.c;
+        x();// is this a call site? YES, have you given any extra INFO here? NO // WINDOW 
+        this.c(); // is this a call site? YES  have you given any extra INFO here? YES OBj
+        console.log(this.c == printThis);
+    }
+}
+obj.d() // is this a call site ? YES
+// have you given any extra info ? YES Obj
+
+
+/*
+    OBJ
+    WINDOW
+    WINDOW
+    OBJ
+    true
+
+*/
+
