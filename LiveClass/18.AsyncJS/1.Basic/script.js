@@ -85,6 +85,7 @@ console.log("g");
 console.log("h");
 console.log("i");
 
+// EJOF
 // ANSWER
 // a, b, d, e, f g, h, i , c
 */
@@ -244,3 +245,23 @@ for(var i=0; i<5 ;i++) {
 // 5 5 5 5 5
 -------------- LiveClass/18.AsyncJS/1.Basic/SS/TrickIntelligentQUES2.png ------------ 
 */
+
+// EXAMPLE 10: SOLUTION for Problem 9 without using let.
+/*
+for(var i=0; i<5 ;i++) {
+    
+    ((val) => {
+        setTimeout(() => {
+            console.log(val);
+        }, 0);
+    })(i)
+}
+
+// answer
+// 0 1 2 3 4
+*/
+
+
+// ((val1, val2) => {
+//     console.log("hello", val1, val2 );
+// })(2, 1)
