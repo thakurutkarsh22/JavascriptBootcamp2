@@ -5,7 +5,7 @@
  * 
  * State of Promise -> 
  *  Pending -> when we are waiting for the future value to arrive 
- *  Fulfilled -> When the future value has arrived. 
+ *  Fulfilled/resolved -> When the future value has arrived. 
  *  Rejected -> when Error Happens.
  */
 
@@ -201,7 +201,7 @@ console.log("B");
 // 1. multiple catch blocks
 
 // EXAMPLE 7:
-
+/*
 const pokeUrl = "https://pokeapi.co/api/v2/pokemon/ditto kajsdhakdjhaskdjhaskdjhaskj";
 
 console.log("A");
@@ -230,5 +230,129 @@ console.log("B");
 
 // Answer: 
 // A, B, Level1, Level 2 error, level 3 undefined, level4 100, 
+*/
 
 
+// Example 8: 
+/*
+console.log("A");
+const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+
+fetch(url)
+.then(response => {
+    console.log('level 1')
+    const data = response.json(); 
+    return data;
+})
+.then((data)=> {
+    console.log('level 2 data')
+    return data;
+}, (error) => {
+    console.log('level 2 error')
+    return "error";
+})
+.then(data => {
+    console.log('level 3 data')
+    console.log(data);
+
+    // MOCKING ERROR 
+    throw new Error("utkarsh created this error");
+})
+.then(data => {
+    console.log('level 4 data', data)
+    return 1;
+})
+.catch(eror => {
+    console.log('level 5 error', eror)
+})
+
+console.log("B");
+
+// Answer: A, b, level1, level2 data, level3 data, Level 5 error;
+*/
+
+
+// EXAMPLE 9: 
+/*
+console.log("A");
+const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+
+fetch(url)
+.then(response => {
+    console.log('level 1', response.status)
+    const data = response.json(); 
+    return data;
+})
+.then((data)=> {
+    console.log('level 2 data')
+    return 10;
+}, (error) => {
+    console.log('level 2 error')
+    return "error";
+})
+.then(data => {
+    console.log('level 3 data', data)
+    // MOCKING ERROR 
+    throw new Error("utkarsh created this error");
+})
+.then(data => {
+    console.log('level 4 data', data)
+    return 1;
+}, (err) => {
+    console.log('level 4 err', err)
+})
+.catch(eror => {
+    console.log('level 5 error', eror)
+})
+.then(data => {
+    console.log("level 6", data);
+})
+
+console.log("B");
+
+// Annswer: A, b, level 1 200,  level 2 data, level 3 data 10, level 4 err utkarsh created this error, level 6 undefined.
+*/
+
+
+
+// EXAMPLE 10: 
+/*
+console.log("A");
+const url = "https://pokeapi.co/api/v2/pokemon/ditto";
+
+fetch(url)
+.then(response => {
+    console.log('level 1', response.status)
+    const data = response.json(); 
+    return data;
+})
+.then((data)=> {
+    console.log('level 2 data')
+    throw new Error("error at lv2");
+    return 10;
+}, (error) => {
+    console.log('level 2 error')
+    return "error";
+})
+.then(data => {
+    console.log('level 3 data', data)
+    // MOCKING ERROR 
+    throw new Error("utkarsh created this error");
+})
+.then(data => {
+    console.log('level 4 data', data)
+    return 1;
+}, (err) => {
+    console.log('level 4 err', err)
+})
+.catch(eror => {
+    console.log('level 5 error', eror)
+})
+.then(data => {
+    console.log("level 6", data);
+})
+
+console.log("B");
+
+// Answer : A, B , level 1 200, level 2 data, level 4 err : error at lv2, lv6 undef.
+*/
