@@ -1,0 +1,45 @@
+let Salman="Hii My Name Is Salman";
+console.log(`${Salman}`)
+
+//............................ explan why
+
+const question1=function(a,b){
+    if(a===b){
+        console.log(`This condition Are Equal`)
+    }else{
+        console.log(`This Condition Are Not Equal`)
+    }
+}
+// question1({},{})
+
+
+const Question2=(a,b)=>{              // I used fat arrow function in fat arrow funtion we dont write function key word
+    if(a===b){
+        console.log(`This condition Are Equal`)
+    }
+    else{
+        console.log(`This Condition Are Not Equal`)
+    }
+}
+
+// Question2(-0,0)
+
+
+let Total_1=1+1+"1";
+let Total_2="1"+1+1;
+
+ if(Total_1===Total_2){
+    console.log(`This Condition Are Equal`)
+ }else(
+    console.log(`This Condition Are Not Equal`)
+ )
+
+// What is the Output And Why
+
+
+function sum(a=0, b=0, c=0){                    //this function we cannot use multiple time 
+return a+b*c
+}
+const result=sum(2,2,3)
+
+console.log(`the sum of a,b,c is ${result}`)      // this is the right way of console.log
