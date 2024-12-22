@@ -40,9 +40,9 @@ utkarshFetch
 
 // Fetch Behind the scenes IDEA ---- 
 
-// fetch()
+fetch()
 
-/*
+
 function myFetch(url, options) {
     const promise = new Promise((res, rej) => {
         // 1. Fetch the data from server 
@@ -77,6 +77,6 @@ myFetch("someUrl")
     console.log("lv1", resp)
 })
 
-*/
+
 
 // WAY 2: Async - await . 
